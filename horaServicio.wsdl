@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:tns="http://localhost/horaServicio"
+             targetNamespace="http://localhost/horaServicio">
+    <types>
+        <xsd:schema targetNamespace="http://localhost/horaServicio">
+            <xsd:element name="obtenerHoraServidorRequest" type="xsd:string"/>
+            <xsd:element name="obtenerHoraServidorResponse" type="xsd:string"/>
+        </xsd:schema>
+    </types>
+    <message name="obtenerHoraServidorRequest">
+        <part name="parameters" element="tns:obtenerHoraServidorRequest"/>
+    </message>
+    <message name="obtenerHoraServidorResponse">
+        <part name="parameters" element="tns:obtenerHoraServidorResponse"/>
+    </message>
+    <portType name="HoraServicioPortType">
+        <operation name="obtenerHoraServidor">
+            <input message="tns:obtenerHoraServidorRequest"/>
+            <output message="tns:obtenerHoraServidorResponse"/>
+        </operation>
+    </portType>
+    <binding name="HoraServicioBinding" type="tns:HoraServicioPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="obtenerHoraServidor">
+            <soap:operation soapAction="http://localhost/horaServicio#obtenerHoraServidor"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="HoraServicio">
+        <port name="HoraServicioPort" binding="tns:HoraServicioBinding">
+            <soap:address location="http://localhost/horaServicio.php"/>
+        </port>
+    </service>
+</definitions>

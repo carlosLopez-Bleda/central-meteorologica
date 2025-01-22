@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Meteorológica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Central Meteorológica</h1>
+    </header>
+    <main>
+        <section id="hora">
+            <h2>Hora del Servidor</h2>
+            <p id="hora-valor">Cargando...</p>
+            <button onclick="recargarHora()">Recargar Hora</button>
+        </section>
+        <section id="meteorologia">
+            <h2>Predicción Meteorológica</h2>
+            <ul id="prediccion-lista">
+                <li>Cargando...</li>
+            </ul>
+            <button onclick="recargarPrediccion()">Recargar Predicción</button>
+        </section>
+        <section id="humedad">
+            <h2>Humedad Actual</h2>
+            <p id="humedad-valor">Cargando...</p>
+            <button onclick="recargarHumedad()">Recargar Humedad</button>
+        </section>
+        <section id="viento">
+            <h2>Velocidad y Dirección del Viento</h2>
+            <p id="viento-valor">Cargando...</p>
+            <button onclick="recargarViento()">Recargar Viento</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
