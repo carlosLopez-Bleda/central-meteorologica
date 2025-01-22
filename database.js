@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
- const MONGO_URI ='mongodb+srv://clm0026:jacobito12@cluster0.vojyc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+ const MONGO_URI ='mongodb+srv://clm0026:jacobito12@cluster0.vojyc.mongodb.net/central_meteorologica';
 
 
 const connectDB = async () => {
