@@ -1,0 +1,27 @@
+{
+  "name": "nodemongo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.12.0",
+    "mongoose": "^8.9.5"
+  },
+  "description": "\"# central-meteorologica\"",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosLopez-Bleda/central-meteorologica.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/carlosLopez-Bleda/central-meteorologica/issues"
+  },
+  "homepage": "https://github.com/carlosLopez-Bleda/central-meteorologica#readme"
+}
